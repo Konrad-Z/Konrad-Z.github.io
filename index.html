@@ -29,22 +29,101 @@
 
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b-2 border-solid border-b-[#d0d4d9] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
-            <h2 class="text-[#111418] text-base font-medium leading-tight tracking-[-0.015em]">Portfolio</h2>
+  <div class="relative flex min-h-screen flex-col bg-white" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+    <header class="flex items-center justify-between border-b-2 border-[#d0d4d9] px-10 py-4">
+      <h1 class="text-xl font-bold text-[#111418]">Konrad Zajac</h1>
+      <nav class="flex gap-6">
+        <a href="#about" class="text-base font-medium text-[#111418]">About</a>
+        <a href="#education" class="text-base font-medium text-[#111418]">Education</a>
+        <a href="#experience" class="text-base font-medium text-[#111418]">Experience</a>
+        <a href="#skills" class="text-base font-medium text-[#111418]">Skills</a>
+        <a href="#contact" class="text-base font-medium text-[#111418]">Contact</a>
+      </nav>
+    </header>
+
+    <main class="px-10 py-8 space-y-14">
+      <!-- About -->
+      <section id="about">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">About Me</h2>
+        <p class="text-gray-700 text-base max-w-3xl">
+          I’m Konrad Zajac, a Computer Science student at Nottingham Trent University. I’ve completed my first year and am currently on track to achieve a First Class Honours (1st). I'm passionate about programming, 3D modeling, and software development.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Education</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>
+            <strong>Nottingham Trent University (2024–2027)</strong><br />
+            BSc Computer Science – First Year Completed<br />
+            Grade: Low 1st (120 credits achieved)
+          </li>
+          <li class="mt-2">
+            <strong>T-Level in Digital Production, Design & Development</strong><br />
+            Achieved Distinction
+          </li>
+        </ul>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Work Experience</h2>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <strong>Store Assistant, Aldi</strong><br />
+            <em>July 2023 – Present</em>
+            <ul class="list-disc list-inside">
+              <li>Provided efficient and friendly customer service</li>
+              <li>Operated tills and supported two new store openings</li>
+              <li>Assisted in initial merchandising, team coordination, and system setup</li>
+            </ul>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-7">
-              <a class="text-[#111418] text-base font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#111418] text-base font-medium leading-normal" href="#">Projects</a>
-              <a class="text-[#111418] text-base font-medium leading-normal" href="#">Skills</a>
-              <a class="text-[#111418] text-base font-medium leading-normal" href="#">Contact</a>
-            </div>
+          <div>
+            <strong>3D Modeler (Work Experience), Bloc Digital</strong><br />
+            <em>Feb 2022 – Present</em>
+            <ul class="list-disc list-inside">
+              <li>Created 3D assets and models for real-world use</li>
+              <li>Worked on client projects in a collaborative team</li>
+              <li>Contributed to animations and visual assets</li>
+            </ul>
           </div>
-        </header>
-      </div>
-    </div>
-  </body>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Skills</h2>
+        <div class="grid grid-cols-2 gap-4 text-gray-700">
+          <ul class="list-disc list-inside">
+            <li>Python</li>
+            <li>JavaScript (basic)</li>
+            <li>HTML & CSS</li>
+            <li>Tailwind CSS</li>
+            <li>Git & GitHub</li>
+          </ul>
+          <ul class="list-disc list-inside">
+            <li>3D Modeling (Blender)</li>
+            <li>Team Collaboration</li>
+            <li>Problem Solving</li>
+            <li>Presentation & Communication</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Contact</h2>
+        <p class="text-gray-700">
+          Feel free to reach out via GitHub or connect with me on LinkedIn.
+        </p>
+        <div class="mt-4 flex gap-6">
+          <a href="https://github.com/konrad-z" class="text-blue-600 hover:underline">GitHub</a>
+          <!-- Add LinkedIn if you have it -->
+          <!-- <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-600 hover:underline">LinkedIn</a> -->
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
