@@ -30,100 +30,93 @@
   </head>
   <body>
   <div class="relative flex min-h-screen flex-col bg-white" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+    <!-- Navbar -->
     <header class="flex items-center justify-between border-b-2 border-[#d0d4d9] px-10 py-4">
       <h1 class="text-xl font-bold text-[#111418]">Konrad Zajac</h1>
       <nav class="flex gap-6">
-        <a href="#about" class="text-base font-medium text-[#111418]">About</a>
-        <a href="#education" class="text-base font-medium text-[#111418]">Education</a>
-        <a href="#experience" class="text-base font-medium text-[#111418]">Experience</a>
-        <a href="#skills" class="text-base font-medium text-[#111418]">Skills</a>
-        <a href="#contact" class="text-base font-medium text-[#111418]">Contact</a>
+        <a href="#about" class="text-base font-medium text-[#111418] hover:underline">About</a>
+        <a href="#projects" class="text-base font-medium text-[#111418] hover:underline">Projects</a>
+        <a href="#skills" class="text-base font-medium text-[#111418] hover:underline">Skills</a>
+        <a href="#contact" class="text-base font-medium text-[#111418] hover:underline">Contact</a>
       </nav>
     </header>
 
+    <!-- Content -->
     <main class="mx-auto max-w-4xl px-4 py-8 space-y-14">
-  <!-- About -->
-  <section id="about">
-    <h2 class="text-2xl font-semibold text-[#111418] mb-2">About Me</h2>
-    <p class="text-gray-700 text-base">
-      I’m Konrad Zajac, a Computer Science student at Nottingham Trent University. I’ve completed my first year and am currently on track to achieve a First Class Honours (1st). I'm passionate about programming, 3D modeling, and software development.
-    </p>
-  </section>
+      <!-- About -->
+      <section id="about">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">About Me</h2>
+        <p class="text-gray-700">
+          I'm a Computer Science student at Nottingham Trent University with a passion for 3D modeling, software development, and problem-solving.
+        </p>
+      </section>
 
-  <!-- Education -->
-  <section id="education">
-    <h2 class="text-2xl font-semibold text-[#111418] mb-2">Education</h2>
-    <ul class="list-disc list-inside text-gray-700">
-      <li>
-        <strong>Nottingham Trent University (2024–2027)</strong><br />
-        BSc Computer Science – First Year Completed<br />
-        Grade: Low 1st (120 credits achieved)
-      </li>
-      <li class="mt-2">
-        <strong>T-Level in Digital Production, Design & Development</strong><br />
-        Achieved Distinction
-      </li>
-    </ul>
-  </section>
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-6">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Project Card 1 -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
+            <h3 class="text-lg font-semibold text-[#111418] mb-1">Python Game: Maze Runner</h3>
+            <p class="text-gray-600 text-sm mb-2">
+              A maze navigation game built using Pygame, complete with player collision and random maze generation.
+            </p>
+            <a href="https://github.com/konrad-z/maze-runner" class="text-blue-600 text-sm hover:underline">View on GitHub →</a>
+          </div>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2 class="text-2xl font-semibold text-[#111418] mb-2">Work Experience</h2>
-    <div class="space-y-4 text-gray-700">
-      <div>
-        <strong>Store Assistant, Aldi</strong><br />
-        <em>July 2023 – Present</em>
-        <ul class="list-disc list-inside">
-          <li>Provided efficient and friendly customer service</li>
-          <li>Operated tills and supported two new store openings</li>
-          <li>Assisted in initial merchandising, team coordination, and system setup</li>
-        </ul>
-      </div>
-      <div>
-        <strong>3D Modeler (Work Experience), Bloc Digital</strong><br />
-        <em>Feb 2022 – Present</em>
-        <ul class="list-disc list-inside">
-          <li>Created 3D assets and models for real-world use</li>
-          <li>Worked on client projects in a collaborative team</li>
-          <li>Contributed to animations and visual assets</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+          <!-- Project Card 2 -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
+            <h3 class="text-lg font-semibold text-[#111418] mb-1">3D City Model</h3>
+            <p class="text-gray-600 text-sm mb-2">
+              A Blender project featuring a stylized 3D city environment, rendered for visual presentations and virtual tours.
+            </p>
+            <!-- No GitHub? Leave link off or add later -->
+          </div>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2 class="text-2xl font-semibold text-[#111418] mb-2">Skills</h2>
-    <div class="grid grid-cols-2 gap-4 text-gray-700">
-      <ul class="list-disc list-inside">
-        <li>Python</li>
-        <li>JavaScript (basic)</li>
-        <li>HTML & CSS</li>
-        <li>Tailwind CSS</li>
-        <li>Git & GitHub</li>
-      </ul>
-      <ul class="list-disc list-inside">
-        <li>3D Modeling (Blender)</li>
-        <li>Team Collaboration</li>
-        <li>Problem Solving</li>
-        <li>Presentation & Communication</li>
-      </ul>
-    </div>
-  </section>
+          <!-- Project Card 3 -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
+            <h3 class="text-lg font-semibold text-[#111418] mb-1">Student Portal Clone</h3>
+            <p class="text-gray-600 text-sm mb-2">
+              A basic front-end replica of a university student portal using HTML, CSS, and JavaScript.
+            </p>
+            <a href="https://github.com/konrad-z/student-portal-clone" class="text-blue-600 text-sm hover:underline">View on GitHub →</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="text-2xl font-semibold text-[#111418] mb-2">Contact</h2>
-    <p class="text-gray-700">
-      Feel free to reach out via GitHub or connect with me on LinkedIn.
-    </p>
-    <div class="mt-4 flex gap-6">
-      <a href="https://github.com/konrad-z" class="text-blue-600 hover:underline">GitHub</a>
-      <!-- Add LinkedIn if available -->
-    </div>
-  </section>
-</main>
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Skills</h2>
+        <div class="grid grid-cols-2 gap-4 text-gray-700">
+          <ul class="list-disc list-inside">
+            <li>Python</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript (basic)</li>
+            <li>Tailwind CSS</li>
+            <li>Git & GitHub</li>
+          </ul>
+          <ul class="list-disc list-inside">
+            <li>3D Modeling (Blender)</li>
+            <li>Team Collaboration</li>
+            <li>Problem Solving</li>
+            <li>Animation Basics</li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Contact</h2>
+        <p class="text-gray-700">
+          You can reach out to me via GitHub or connect on LinkedIn.
+        </p>
+        <div class="mt-4 flex gap-6">
+          <a href="https://github.com/konrad-z" class="text-blue-600 hover:underline">GitHub</a>
+          <!-- Optional: LinkedIn -->
+          <!-- <a href="https://linkedin.com/in/konrad-zajac" class="text-blue-600 hover:underline">LinkedIn</a> -->
+        </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>
