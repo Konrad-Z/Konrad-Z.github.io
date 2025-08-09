@@ -40,49 +40,58 @@
 
     <!-- Video Grid -->
     <main class="relative px-4 py-8 max-w-full mx-auto">
+      <div class="scrolling-wrapper overflow-hidden no-scrollbar px-12">
+        <div id="videoContainer" class="scrolling-container">
+          
+          <!-- Original videos -->
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/Pixel 6 Water Sim_2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="text-sm text-gray-600 text-center">Water Simulation</p>
+          </div>
 
-      <!-- Left Arrow -->
-      <button id="scrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10 hover:bg-gray-600">
-        &#8592;
-      </button>
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/Trees.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="text-sm text-gray-600 text-center">Tree Loop</p>
+          </div>
 
-      <!-- Video Container -->
-      <div id="videoContainer" class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar px-12">
-        
-        <!-- Project 1 -->
-        <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
-          <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
-            <source src="assets/images/Pixel 6 Water Sim_2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="text-sm text-gray-600 text-center">Water Simulation</p>
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/WaterFX2.mkv" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="text-sm text-gray-600 text-center">Water FX</p>
+          </div>
+
+          <!-- Duplicate videos for seamless looping -->
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/Pixel 6 Water Sim_2.mp4" type="video/mp4">
+            </video>
+            <p class="text-sm text-gray-600 text-center">Water Simulation</p>
+          </div>
+
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/Trees.mp4" type="video/mp4">
+            </video>
+            <p class="text-sm text-gray-600 text-center">Tree Loop</p>
+          </div>
+
+          <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+            <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
+              <source src="assets/images/WaterFX2.mkv" type="video/mp4">
+            </video>
+            <p class="text-sm text-gray-600 text-center">Water FX</p>
+          </div>
+
         </div>
-
-        <!-- Project 2 -->
-        <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
-          <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
-            <source src="assets/images/Trees.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="text-sm text-gray-600 text-center">Tree Loop</p>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
-          <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover">
-            <source src="assets/images/WaterFX2.mkv" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="text-sm text-gray-600 text-center">Water FX</p>
-        </div>
-
       </div>
-
-      <!-- Right Arrow -->
-      <button id="scrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10 hover:bg-gray-600">
-        &#8594;
-      </button>
-      
     </main>
     
     <style>
@@ -93,6 +102,23 @@
       .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+      }
+
+      /* Continuous scrolling effect */
+      @keyframes scrollLoop {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Move by half since content is duplicated */
+      }
+
+      .scrolling-container {
+        display: flex;
+        gap: 1.5rem; /* match your gap-6 in Tailwind */
+        animation: scrollLoop 20s linear infinite;
+      }
+
+      /* Optional: pause on hover */
+      .scrolling-wrapper:hover .scrolling-container {
+        animation-play-state: paused;
       }
     </style>
 
