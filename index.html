@@ -99,15 +99,43 @@
     
     <script>
       const videoContainer = document.getElementById('videoContainer');
-      const scrollAmount = 650; // match video width + gap
+      const scrollAmount = 650; // width + gap
+      const videoCount = videoContainer.children.length;
+      let currentIndex = 0;
+      let autoScrollInterval;
+
+      function scrollToIndex(index) {
+        videoContainer.scrollTo({
+          left: index * scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+          currentIndex++;
+          if (currentIndex >= videoCount) {
+            currentIndex = 0;
+          }
+          scrollToIndex(currentIndex);
+        }, 3000); // every 3 seconds
+      }
 
       document.getElementById('scrollLeft').addEventListener('click', () => {
-        videoContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        clearInterval(autoScrollInterval);
+        currentIndex = (currentIndex - 1 + videoCount) % videoCount;
+        scrollToIndex(currentIndex);
+        startAutoScroll();
       });
 
       document.getElementById('scrollRight').addEventListener('click', () => {
-        videoContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        clearInterval(autoScrollInterval);
+        currentIndex = (currentIndex + 1) % videoCount;
+        scrollToIndex(currentIndex);
+        startAutoScroll();
       });
+
+      startAutoScroll();
     </script>
 
   </div>
