@@ -99,28 +99,12 @@
     
     <script>
       const videoContainer = document.getElementById('videoContainer');
-      const scrollAmount = 650; // width + gap
+      const scrollAmount = 650; // match video width + gap
       const videoCount = videoContainer.children.length;
       let currentIndex = 0;
       let autoScrollInterval;
 
-      function scrollToIndex(index) {
-        videoContainer.scrollTo({
-          left: index * scrollAmount,
-          behavior: 'smooth'
-        });
-      }
-
-      function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-          currentIndex++;
-          if (currentIndex >= videoCount) {
-            currentIndex = 0;
-          }
-          scrollToIndex(currentIndex);
-        }, 3000); // every 3 seconds
-      }
-
+      // Manual scroll buttons
       document.getElementById('scrollLeft').addEventListener('click', () => {
         clearInterval(autoScrollInterval);
         currentIndex = (currentIndex - 1 + videoCount) % videoCount;
@@ -135,8 +119,27 @@
         startAutoScroll();
       });
 
+      function scrollToIndex(index) {
+        videoContainer.scrollTo({
+          left: index * scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+          currentIndex++;
+          if (currentIndex >= videoCount) {
+            currentIndex = 0; // loop back to start
+          }
+          scrollToIndex(currentIndex);
+        }, 3000); // every 3 seconds
+      }
+
+      // Start automatic scrolling on load
       startAutoScroll();
     </script>
+
 
   </div>
 </body>
