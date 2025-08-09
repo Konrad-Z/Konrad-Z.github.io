@@ -32,111 +32,44 @@
   <div class="relative flex min-h-screen flex-col bg-white" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
     <!-- Navbar -->
     <header class="flex items-center justify-between border-b-2 border-[#d0d4d9] px-10 py-4">
-      <h1 class="text-xl font-bold text-[#111418]">Konrad Zajac</h1>
+      <h1 class="text-xl font-bold text-[#111418]">Konrad Zajac's Portfolio</h1>
       <nav class="flex gap-6">
-        <a href="#about" class="text-base font-medium text-[#111418] hover:underline">About</a>
-        <a href="#projects" class="text-base font-medium text-[#111418] hover:underline">Projects</a>
-        <a href="#skills" class="text-base font-medium text-[#111418] hover:underline">Skills</a>
-        <a href="#contact" class="text-base font-medium text-[#111418] hover:underline">Contact</a>
+        <a href="#about" class="text-base font-medium text-[#111418] hover:underline">3D Archive</a>
       </nav>
     </header>
 
-    <!-- Content -->
-    <main class="mx-auto max-w-4xl px-4 py-8 space-y-14">
-      <!-- About -->
-      <section id="about">
-        <h2 class="text-2xl font-semibold text-[#111418] mb-2">About Me</h2>
-        <p class="text-gray-700">
-          I'm a Computer Science student at Nottingham Trent University with a passion for 3D modeling, software development, and problem-solving.
-        </p>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <h2 class="text-2xl font-semibold text-[#111418] mb-6">Projects</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Project 1: Library Management System -->
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
-            <h3 class="text-lg font-semibold text-[#111418] mb-2">Library Management System (C++)</h3>
-            <p class="text-gray-600 text-sm mb-2">
-              A command-line application that uses C++ and MySQL to manage library data, implementing full CRUD operations with robust error handling and search features.
-            </p>
-            <ul class="text-gray-600 text-sm list-disc list-inside mb-2">
-              <li>Connects to MySQL (v9.X.X) via MySQL Connector</li>
-              <li>Password-based DB login</li>
-              <li>Validates input (email, phone, ranges, length)</li>
-              <li>CRUD: Users, Titles, Copies, Borrowed info</li>
-              <li>Search & export to text file</li>
-            </ul>
-            <!-- Optional GitHub link -->
-            <!-- <a href="https://github.com/konrad-z/library-system" class="text-blue-600 text-sm hover:underline">View on GitHub →</a> -->
-          </div>
-
-          <!-- Project 2: Election Analysis -->
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
-            <h3 class="text-lg font-semibold text-[#111418] mb-2">2024 UK Election Analysis</h3>
-            <p class="text-gray-600 text-sm mb-2">
-              An analytical program that processes data from the 2024 UK general election and presents it in a clear, visual format.
-            </p>
-            <ul class="text-gray-600 text-sm list-disc list-inside">
-              <li>Reads large datasets</li>
-              <li>Breaks down results by region and party</li>
-              <li>Presents charts/tables for insights</li>
-              <li>Focus on clean data handling and logic</li>
-            </ul>
-            <!-- <a href="https://github.com/konrad-z/election-analysis" class="text-blue-600 text-sm hover:underline">View on GitHub →</a> -->
-          </div>
-
-          <!-- Project 3: Blender Archive -->
-          <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all">
-            <h3 class="text-lg font-semibold text-[#111418] mb-2">Blender Projects Archive</h3>
-            <p class="text-gray-600 text-sm mb-2">
-              A growing collection of 3D renders and animation projects created in Blender. Includes stylized environments, props, and experimental lighting.
-            </p>
-            <ul class="text-gray-600 text-sm list-disc list-inside mb-2">
-              <li>Showcases 3D modeling and animation work</li>
-              <li>Includes rendered images and short clips</li>
-              <li>Rendered using Eevee and Cycles</li>
-              <li>Frequent updates as skills progress</li>
-            </ul>
-            <a href="/blender.html" class="text-blue-600 text-sm hover:underline">View Blender Renders →</a>
-          </div>
+    <!-- Video Grid -->
+    <main class="px-10 py-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
+        
+        <!-- Project 1 -->
+        <div class="flex flex-col gap-2">
+          <video controls class="rounded-lg w-full">
+            <source src="assets/images/Pixel 6 Water Sim_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-sm text-gray-600">Water Simulation</p>
         </div>
-      </section>
 
-
-      <!-- Skills -->
-      <section id="skills">
-        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Skills</h2>
-        <div class="grid grid-cols-2 gap-4 text-gray-700">
-          <ul class="list-disc list-inside">
-            <li>Python</li>
-            <li>HTML & CSS</li>
-            <li>JavaScript (basic)</li>
-            <li>Tailwind CSS</li>
-            <li>Git & GitHub</li>
-          </ul>
-          <ul class="list-disc list-inside">
-            <li>3D Modeling (Blender)</li>
-            <li>Team Collaboration</li>
-            <li>Problem Solving</li>
-            <li>Animation Basics</li>
-          </ul>
+        <!-- Project 2 -->
+        <div class="flex flex-col gap-2">
+          <video controls class="rounded-lg w-full">
+            <source src="assets/images/Trees.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-sm text-gray-600">Tree Loop</p>
         </div>
-      </section>
 
-      <!-- Contact -->
-      <section id="contact">
-        <h2 class="text-2xl font-semibold text-[#111418] mb-2">Contact</h2>
-        <p class="text-gray-700">
-          You can reach out to me via GitHub or connect on LinkedIn.
-        </p>
-        <div class="mt-4 flex gap-6">
-          <a href="https://github.com/konrad-z" class="text-blue-600 hover:underline">GitHub</a>
-          <!-- Optional: LinkedIn -->
-          <!-- <a href="https://linkedin.com/in/konrad-zajac" class="text-blue-600 hover:underline">LinkedIn</a> -->
+        <!-- Project 3 -->
+        <div class="flex flex-col gap-2">
+          <video controls class="rounded-lg w-full">
+            <source src="assets/images/WaterFX2.mkv" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-sm text-gray-600">Water FX</p>
         </div>
-      </section>
+
+      </div>
     </main>
   </div>
 </body>
