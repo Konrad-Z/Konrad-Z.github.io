@@ -1,32 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konrad Zajac</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Konrad Zajac</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-
-    <body class="bg-white font-sans">
+<body class="bg-white font-sans">
     
-        <div class="min-h-screen flex justify-center items-start pt-20">
+    <div class="flex justify-center items-start pt-8"> 
+        
+        <div class="flex flex-col items-center">
             
-            <div class="flex items-baseline space-x-4">
-                
-                <h1 class="text-6xl font-extrabold text-black">
-                    Konrad Zajac
-                </h1>
-                
-                <h2 class="text-3xl font-semibold text-gray-700">
-                    BSc Computer Science
-                </h2>
-                
-            </div>
+            <h1 class="text-6xl font-extrabold text-black mb-4">
+                Konrad Zajac
+            </h1>
+            
+            <h2 class="text-3xl font-semibold text-gray-700">
+                BSc Computer Science
+            </h2>
+            
+            <p class="text-2xl font-bold max-w-2xl px-4 text-pink-600 mt-3">
+                Take a look at some of the things I have worked on!
+            </p>
             
         </div>
+        
+    </div>
     
-    </body>
+    <div class="flex justify-start w-full pt-10 pl-8"> 
+        
+        <h3 class="text-xl font-bold text-black">
+            3D Models & Animations
+        </h3>
+        
+    </div>
 
+    <main class="relative py-8 max-w-full mx-auto w-fit">
+        <div id="videoContainer" class="flex space-x-6 pb-8  ">
+            <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <source src="assets/images/Pixel 6 Water Sim_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="text-sm text-gray-600 text-center">Water Simulation</p>
+            </div>
 
+            <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <source src="assets/images/Trees.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="text-sm text-gray-600 text-center">Tree Loop</p>
+            </div>
+
+            <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                <video autoplay loop muted playsinline class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <source src="assets/images/WaterFX2.mkv" type="video/mp4">
+                    Your browser does not support the video tag. (Water FX)
+                </video>
+                <p class="text-sm text-gray-600 text-center">Water FX</p>
+            </div>
+        </div>
+        <div id="imageContainer" class="flex space-x-6  pb-8">
+                <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                    <img src="assets/images/Planet3.jpg" alt="Planet render" class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <p class="text-sm text-gray-600 text-center">Planet Environment</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                    <img src="assets/images/Sun.jpg" alt="Sun render" class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <p class="text-sm text-gray-600 text-center">Sun Surface</p>
+                </div>
+                
+                <div class="flex-shrink-0 w-[600px] flex flex-col gap-2">
+                    <img src="assets/images/bluehole.jpg" alt="Bluehole environment" class="rounded-lg w-full h-[340px] object-cover bg-gray-900">
+                    <p class="text-sm text-gray-600 text-center">Bluehole</p>
+                </div>
+            </div>
+    </main>
+
+    <main class="relative max-w-full mx-auto w-fit">
+            
+        
+    </main>
+ 
+</body>
 </html>
