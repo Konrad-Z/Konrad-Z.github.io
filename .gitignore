@@ -1,0 +1,56 @@
+# ----------------------------------------------------------------------
+# Dependencies and Node.js
+# ----------------------------------------------------------------------
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/pnpm-debug.log
+.pnpm-store
+
+# ----------------------------------------------------------------------
+# Build Output and Deployment
+# ----------------------------------------------------------------------
+# The 'build' or 'dist' directory is where your compiled, production-ready 
+# code will be placed. This should NOT be committed to git.
+/build
+/dist
+/out
+/gh-pages 
+
+# ----------------------------------------------------------------------
+# Log Files and Caches
+# ----------------------------------------------------------------------
+*.log
+.npm
+.yarn
+/coverage
+.eslintcache
+.vite
+.parcel-cache
+.cache
+
+# ----------------------------------------------------------------------
+# Environment Variables / Secrets
+# ----------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ----------------------------------------------------------------------
+# IDE and OS Files
+# ----------------------------------------------------------------------
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-workspace
+
+# JetBrains IDEs (WebStorm, etc.)
+.idea
+
+# macOS files
+.DS_Store
